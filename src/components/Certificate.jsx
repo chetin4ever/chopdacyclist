@@ -88,33 +88,30 @@ const Certificate = () => {
 
       {/* Certificate */}
       <div className='flex flex-col items-center gap-6 p-8'>
-        <div
-          ref={certRef}
-          className='relative w-[1024px] bg-white shadow-xl border rounded-xl overflow-hidden'
-        >
-          <img
-            src='/chopdacyclistcer.png'
-            alt='certificate'
-            className='w-full h-auto'
-          />
+        <div className='w-full max-w-full flex justify-center'>
+          <div
+            ref={certRef}
+            className='relative w-full max-w-[1024px] aspect-[4/3] bg-white  overflow-hidden'
+          >
+            {/* Background certificate image */}
+            <img
+              src='/chopdacyclistcer.png'
+              alt='certificate'
+              className='w-full h-full object-contain'
+            />
 
-          {name && (
-            <div className='absolute top-[42%] left-1/2 transform -translate-x-1/2 text-center'>
-              {/* Inline font style here */}
-              <h2
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontSize: "44px",
-                  color: "#00554E",
-                  fontWeight: "400C",
-                  whiteSpace: "nowrap",
-                  margin: "0 auto",
-                }}
-              >
-                {name}
-              </h2>
-            </div>
-          )}
+            {/* Name Overlay */}
+            {name && (
+              <div className='absolute top-[44%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center px-2'>
+                <h2
+                  className='text-base sm:text-xl md:text-2xl lg:text-4xl font-fancy'
+                  style={{ color: "#006400" }}
+                >
+                  {name}
+                </h2>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Buttons */}
@@ -122,7 +119,7 @@ const Certificate = () => {
           <button
             onClick={downloadPNG}
             disabled={!name}
-            className='w-80 px-6 py-3 rounded-xl font-semibold shadow-md 
+            className='w-40 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md 
                bg-gradient-to-r from-green-800 to-yellow-500 text-white
                hover:from-green-700 hover:to-yellow-400 
                disabled:opacity-50 disabled:cursor-not-allowed 
@@ -133,7 +130,7 @@ const Certificate = () => {
           <button
             onClick={downloadPDF}
             disabled={!name}
-            className='w-80 px-6 py-3 rounded-xl font-semibold shadow-md 
+            className='w-40 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md 
                bg-gradient-to-r from-green-800 to-yellow-500 text-white
                hover:from-green-700 hover:to-yellow-400 
                disabled:opacity-50 disabled:cursor-not-allowed 
