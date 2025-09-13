@@ -102,7 +102,7 @@ const Certificate = () => {
 
             {/* Name Overlay */}
             {name && (
-              <div className='absolute top-[44%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center px-2'>
+              <div className='absolute top-[43%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center px-2'>
                 <h2
                   className='text-base sm:text-xl md:text-2xl lg:text-4xl font-fancy'
                   style={{ color: "#006400" }}
