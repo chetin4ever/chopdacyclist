@@ -128,7 +128,7 @@ const Certificate = () => {
           <button
             onClick={downloadPNG}
             disabled={!name}
-            className='w-20 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md
+            className='w-40 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md
                bg-gradient-to-r from-[#FF9933] via-[#F5F5F5] to-[#138808]
                text-[#000080]
                hover:from-[#ff8c1a] hover:via-[#ffffff] hover:to-[#0f6f06]
@@ -141,7 +141,7 @@ const Certificate = () => {
           <button
             onClick={downloadPDF}
             disabled={!name}
-            className='w-20 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md
+            className='w-40 md:w-80 px-6 py-3 rounded-xl font-semibold shadow-md
                bg-gradient-to-r from-[#FF9933] via-[#F5F5F5] to-[#138808]
                text-[#000080]
                hover:from-[#ff8c1a] hover:via-[#ffffff] hover:to-[#0f6f06]
