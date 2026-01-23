@@ -107,19 +107,29 @@ const Certificate = () => {
             />
 
             {/* Name Overlay */}
-            {name && (
-              <div className='absolute top-[56%] left-1/2 -translate-x-1/2 whitespace-nowrap text-center px-2'>
-                <h2
-                  className='font-poppins font-bold tracking-wide uppercase
-               text-base sm:text-xl md:text-2xl lg:text-4xl
-               bg-gradient-to-r from-[#FF9933] via-[#F5F5F5] to-[#138808]
-               bg-clip-text text-transparent'
-                  style={{ WebkitTextStroke: "0.6px rgba(0,0,0,0.35)" }}
-                >
-                  {name}
-                </h2>
-              </div>
-            )}
+            <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
+              <h2
+                className='font-poppins font-bold uppercase tracking-wide
+                 text-lg sm:text-xl md:text-3xl
+                 bg-gradient-to-r from-[#FF9933] via-[#F5F5F5] to-[#138808]
+                 bg-clip-text text-transparent text-center
+                 whitespace-nowrap'
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  top:
+                    window.innerWidth < 640
+                      ? "54%"
+                      : window.innerWidth < 1024
+                      ? "56%"
+                      : "56%",
+                  maxWidth: "95%", // Optional: prevent overflow outside certificate
+                }}
+              >
+                {name}
+              </h2>
+            </div>
           </div>
         </div>
 
