@@ -111,7 +111,7 @@ const Certificate = () => {
               <h2
                 className='font-poppins font-bold uppercase tracking-wide
                  text-lg sm:text-xl md:text-3xl
-                 bg-gradient-to-r from-[#FF9933] via-[#F5F5F5] to-[#138808]
+                 bg-gradient-to-r from-[#FF9933] to-[#138808]
                  bg-clip-text text-transparent text-center
                  whitespace-nowrap'
                 style={{
