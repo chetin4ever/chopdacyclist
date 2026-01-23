@@ -124,7 +124,8 @@ const Certificate = () => {
                       : window.innerWidth < 1024
                       ? "56%"
                       : "56%",
-                  maxWidth: "95%", // Optional: prevent overflow outside certificate
+                  maxWidth: "95%",
+                  textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
                 }}
               >
                 {name}
