@@ -101,7 +101,7 @@ const Certificate = () => {
           >
             {/* Background certificate image */}
             <img
-              src='/republicdaycertificate.png'
+              src='/certificateSY.jpg'
               alt='certificate'
               className='w-full h-full '
             />
@@ -110,22 +110,29 @@ const Certificate = () => {
             <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
               <h2
                 className='font-poppins font-bold uppercase tracking-wide
-                 text-lg sm:text-xl md:text-3xl
-                 bg-gradient-to-r from-[#FF9933] to-[#138808]
-                 bg-clip-text text-transparent text-center
-                 whitespace-nowrap'
+  text-lg sm:text-xl md:text-3xl
+  text-center'
                 style={{
+                  background: "linear-gradient(90deg, #FF9933, #138808)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+
                   position: "absolute",
                   left: "50%",
                   transform: "translateX(-50%)",
                   top:
                     window.innerWidth < 640
-                      ? "54%"
+                      ? "40%"
                       : window.innerWidth < 1024
-                      ? "56%"
-                      : "56%",
-                  maxWidth: "95%",
-                  textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+                        ? "40%"
+                        : "41%",
+
+                  width: "80%", // ✅ more space
+                  maxWidth: "700px", // ✅ safe limit
+                  whiteSpace: "normal", // ✅ allow wrapping
+                  lineHeight: "1.2",
+
+                  textShadow: "none",
                 }}
               >
                 {name}
